@@ -31,7 +31,67 @@
 .textForm-container {
   margin-top: 130px;
 }
+.textForm-container textarea{
+  resize: none;
+}
 
 .alert-container {
   margin-top: 55px;
 }
+.page {
+  position: relative;
+  height: 520px;
+  width: 410px;
+  border: none;
+  margin: auto;
+  overflow: hidden;
+}
+
+.textContent {
+  position: relative;
+  left: 0;
+  top: -520px;
+  height: 462px;
+  width: 350px;
+  margin-top: 25px;
+  margin-bottom: 38px;
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow: hidden;
+  line-height: 14px;
+  background: #00000000;
+  border: none;
+  resize: none;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: glossy-sheen;
+  src: url(/src/fonts/Glossy\ Sheen\ Regular\ DEMO.ttf);
+}
+@font-face {
+  font-family: akashHandWritten;
+  src: url(/src/fonts/akashHandWritten.ttf);
+}
+@font-face {
+  font-family: CedarvilleCursive-Regular;
+  src: url(/src/fonts/CedarvilleCursive-Regular.ttf);
+}
+@font-face {
+  font-family: handwritten-font-1;
+  src: url(/src/fonts/handwritten-font-1.woff);
+}
+
+/* responsive design for mobile  */
+@media only screen and (max-width: 600px) {
+  .textContent {
+    top: 800px;
+    left: 35px;
+    width: 350px;
+  }
+  .page-options{
+    margin-left: 20px;
+  }
+}
+

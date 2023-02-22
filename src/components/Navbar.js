@@ -33,7 +33,7 @@ const Navbar = (props) => {
               </ul>
               <div className="form-check form-switch d-flex justify-content-end text-white">
                 <input className="form-check-input" type="checkbox" role="switch" id="mode" onClick={props.toggleMode}/>
-                <label className="d-flex" htmlFor="mode">{props.mode==='light'?(<><i class="fa-solid fa-moon d-flex align-items-center mx-2 fs-5"></i><small className="d-flex align-items-center text-monospace"> Dark Mode</small></>):(<><i class="fa-solid fa-sun d-flex align-items-center mx-2 fs-5"></i><small className="d-flex align-items-center text-monospace"> Light Mode</small></>)}</label>
+                <label className="d-flex" htmlFor="mode">{props.mode==='light'?(<><i className="fa-solid fa-moon d-flex align-items-center mx-2 fs-5"></i><small className="d-flex align-items-center text-monospace"> Dark Mode</small></>):(<><i className="fa-solid fa-sun d-flex align-items-center mx-2 fs-5"></i><small className="d-flex align-items-center text-monospace"> Light Mode</small></>)}</label>
               </div>
             </div>
           </div>
