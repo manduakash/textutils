@@ -94,10 +94,9 @@ const html2canvas=()=>{
 
   return (
     <div style={props.ThemeStyle}>
-      <h1>Free Copy and Paste Font Generator</h1>
+      <h1 className="overflow-hidden">Free assignment Generator</h1>
       <small>
-        You can use it for your Instagram name, bio, caption or Facebook
-        messages or for Pubg and FreeFire username!
+        You can use it for your school or college assigments/lab without writting it just simply copy and past then take screenshot of it!
       </small>
       <div className="mb-3">
         <label htmlFor="text-box" className="form-label"></label>
@@ -139,12 +138,12 @@ const html2canvas=()=>{
         clear text
       </button>
       <div className="container">
-        <h6 className="mt-3">Your text summary</h6>
+        <h6 className="overflow-hidden mt-3">Your text summary</h6>
         <small>
-          {text ? text.split(" ").length : 0 && console.log(text.split(" "))}{" "}
-          words, {text.length} characters and 000 lines
+          {text ? text.split(/\s+/).filter((element)=>{return element.length!==0}).length : 0}{" "}
+          words, {text.length} characters and {text ? text.split(/\n+/).length : 0}{" "} lines
         </small>
-        <h5 className="mt-3">Preview</h5>
+        <h5 className="overflow-hidden mt-3">Preview</h5>
         <p
           className="text-break"
           style={{
@@ -169,11 +168,12 @@ const html2canvas=()=>{
           <Page text={text} handleOnChange={handleOnChange} textColor={textColor} textStyle={textStyle} textType={textType} textSize={textSize} wordSpace={wordSpace} lineSpace={lineSpace}></Page>
         </div>
 
-        <div className="container justify-content-center page-options col-md-6 col-sm-12">
+        <div className="container justify-content-center page-options col-md-6 col-sm-12" style={props.ThemeStyle}>
 
-        <div className="row my-2">
-          <div className="col-5"> <h6>Text Style:</h6>
-            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+        <div className="row my-2" style={props.ThemeStyle}>
+          <div className="col-5" style={props.ThemeStyle}>
+            <h6 className="overflow-hidden" >Text Style:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example" style={props.ThemeStyle}>
               <option value="akashHandWritten" onClick={(e)=>{setTextStyle(e.target.value);setTextSize("15px");setWordSpace("2px");setLineSpace("16px")}}> Hand-written 1</option>
               <option value="CedarvilleCursive-Regular" onClick={(e)=>{setTextStyle(e.target.value);setTextSize("16px");setWordSpace("2px");setLineSpace("15px")}}>Hand-written 2</option>
               <option value="Atmosphier-Notes" onClick={(e)=>{setTextStyle(e.target.value);setTextSize("15px");setWordSpace("2px");setLineSpace("12px")}}>Hand-written 3</option>
@@ -182,9 +182,9 @@ const html2canvas=()=>{
             </select>
           </div>
 
-          <div className="col-5">
-          <h6>Text Color:</h6>
-            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+          <div className="col-5" style={props.ThemeStyle}>
+            <h6 className="overflow-hidden" >Text Color:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example" style={props.ThemeStyle}>
               <option value="blue" onClick={(e)=>{setTextColor(e.target.value)}}>Blue</option>
               <option value="#212529" onClick={(e)=>{setTextColor(e.target.value)}}>Black</option>
               <option value="#dc3545" onClick={(e)=>{setTextColor(e.target.value)}}>Red</option>
@@ -194,10 +194,10 @@ const html2canvas=()=>{
         </div>
 
 
-        <div className="row my-2">
-          <div className="col-5">
-            <h6>Text Type:</h6>
-            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+        <div className="row my-2" style={props.ThemeStyle}>
+          <div className="col-5" style={props.ThemeStyle}>
+            <h6 className="overflow-hidden" >Text Type:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example" style={props.ThemeStyle}>
               <option value="fw-normal" onClick={(e)=>{setTextType(e.target.value)}}>Normal</option>
               <option value="fw-bold" onClick={(e)=>{setTextType(e.target.value)}}>Bold</option>
               <option value="fs-5 fw-bold text-decoration-underline" onClick={(e)=>{setTextType(e.target.value)}}>Heading</option>
@@ -206,9 +206,9 @@ const html2canvas=()=>{
             </select>
           </div>
 
-          <div className="col-5">
-            <h6>Text Size:</h6>
-            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+          <div className="col-5" style={props.ThemeStyle}>
+            <h6 className="overflow-hidden" >Text Size:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example" style={props.ThemeStyle}>
               <option value="16px" onClick={(e)=>{setTextSize(e.target.value)}}>Normal</option>
               <option value="2px" onClick={(e)=>{setTextSize(e.target.value)}}>2px</option>
               <option value="4px" onClick={(e)=>{setTextSize(e.target.value)}}>4px</option>
@@ -227,10 +227,10 @@ const html2canvas=()=>{
           </div>
         </div>
 
-        <div className="row my-2">
-          <div className="col-5">
-          <h6>Word Space:</h6>
-            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+        <div className="row my-2" style={props.ThemeStyle}>
+          <div className="col-5" style={props.ThemeStyle}>
+          <h6 className="overflow-hidden" >Word Space:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example" style={props.ThemeStyle}>
               <option value="16px" onClick={(e)=>{setWordSpace(e.target.value)}}>Normal</option>
               <option value="2px"  onClick={(e)=>{setWordSpace(e.target.value)}}>2px</option>
               <option value="4px"  onClick={(e)=>{setWordSpace(e.target.value)}}>4px</option>
@@ -248,9 +248,9 @@ const html2canvas=()=>{
             </select>
           </div>
 
-          <div className="col-5">
-            <h6>Line Space:</h6>
-            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+          <div className="col-5" style={props.ThemeStyle}>
+            <h6 className="overflow-hidden" >Line Space:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example" style={props.ThemeStyle}>
               <option value="16px" onClick={(e)=>{setLineSpace(e.target.value)}}>Normal</option>
               <option value="2px"  onClick={(e)=>{setLineSpace(e.target.value)}}>2px</option>
               <option value="4px"  onClick={(e)=>{setLineSpace(e.target.value)}}>4px</option>
@@ -269,7 +269,10 @@ const html2canvas=()=>{
           </div>
         </div>
 
-        <button className="btn btn-success" id="btnSave" onClick={html2canvas}>Simply take a screenshot after wrtting...</button>
+        <div className="d-grid gap-2 col-10 mx-start">
+          <button className="btn btn-disable btn-warning text-white" style={{fontFamily: textStyle, overflow: "hidden"}} disabled data-bs-toggle="button" id="btnSave" onClick={html2canvas}>Simply take a screenshot after writting...</button>
+        </div>
+
 
 
         </div>
