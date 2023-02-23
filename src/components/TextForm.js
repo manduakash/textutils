@@ -9,7 +9,9 @@ const TextForm = (props) => {
   const [textColor, setTextColor] = useState("blue");
   const [textStyle, setTextStyle] = useState("akashHandWritten");
   const [textType, setTextType] = useState("fs-normal");
-
+  const [textSize, setTextSize] = useState("normal");
+  const [wordSpace, setWordSpace] = useState("2px");
+  const [lineSpace, setLineSpace] = useState("14px");
 
 
   // handling on change method
@@ -78,22 +80,8 @@ const TextForm = (props) => {
     }
   };
 
-// const handlePdf = () => {
-//     const input = document.getElementById('textContent');
-
-//     html2canvas(input)
-//         .then((canvas) => {
-//             const imgData = canvas.toDataURL('image/png');
-//             const pdf = new jsPDF('p', 'px', 'a4');
-//             var width = pdf.internal.pageSize.getWidth();
-//             var height = pdf.internal.pageSize.getHeight();
-
-//             pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-//             pdf.save("test.pdf");
-//         });
-// };
 const html2canvas=()=>{
-  let page = document.getElementById('textContent');
+  let page = document.getElementById('page');
   html2PDF(page, {
     jsPDF: {
       format: 'a4',
@@ -176,40 +164,112 @@ const html2canvas=()=>{
         </button>
       </div>
 
-      <div className="container row">
+      <div className="container asmnt-container row my-2">
         <div className="col-md-6 col-sm-12">
-          <Page text={text} handleOnChange={handleOnChange} textColor={textColor} textStyle={textStyle} textType={textType}></Page>
+          <Page text={text} handleOnChange={handleOnChange} textColor={textColor} textStyle={textStyle} textType={textType} textSize={textSize} wordSpace={wordSpace} lineSpace={lineSpace}></Page>
         </div>
 
         <div className="container justify-content-center page-options col-md-6 col-sm-12">
 
-        <h6>Text Style:</h6>
-        <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
-          <option value="akashHandWritten" onClick={(e)=>{setTextStyle(e.target.value)}}> Hand-written 1</option>
-          <option value="CedarvilleCursive-Regular" onClick={(e)=>{setTextStyle(e.target.value)}}>Hand-written 2</option>
-          <option value="glossy-sheen" onClick={(e)=>{setTextStyle(e.target.value)}}>Hand-written 3</option>
-        </select>
-        <hr/>
+        <div className="row my-2">
+          <div className="col-5"> <h6>Text Style:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+              <option value="akashHandWritten" onClick={(e)=>{setTextStyle(e.target.value);setTextSize("15px");setWordSpace("2px");setLineSpace("16px")}}> Hand-written 1</option>
+              <option value="CedarvilleCursive-Regular" onClick={(e)=>{setTextStyle(e.target.value);setTextSize("16px");setWordSpace("2px");setLineSpace("15px")}}>Hand-written 2</option>
+              <option value="Atmosphier-Notes" onClick={(e)=>{setTextStyle(e.target.value);setTextSize("15px");setWordSpace("2px");setLineSpace("12px")}}>Hand-written 3</option>
+              <option value="Manly-signature" onClick={(e)=>{setTextStyle(e.target.value);setTextSize("14px");setWordSpace("-5px");setLineSpace("22px")}}>Hand-written 4</option>
+              <option value="Sansburg-signature" onClick={(e)=>{setTextStyle(e.target.value);setWordSpace("1px");setLineSpace("33px")}}>Hand-written 5</option>
+            </select>
+          </div>
 
-        <h6>Text Color:</h6>
-        <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
-          <option value="blue" onClick={(e)=>{setTextColor(e.target.value)}}>Blue</option>
-          <option value="black" onClick={(e)=>{setTextColor(e.target.value)}}>Black</option>
-          <option value="red" onClick={(e)=>{setTextColor(e.target.value)}}>Red</option>
-          <option value="green" onClick={(e)=>{setTextColor(e.target.value)}}>Green</option>
-        </select>
-        <hr/>
+          <div className="col-5">
+          <h6>Text Color:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+              <option value="blue" onClick={(e)=>{setTextColor(e.target.value)}}>Blue</option>
+              <option value="#212529" onClick={(e)=>{setTextColor(e.target.value)}}>Black</option>
+              <option value="#dc3545" onClick={(e)=>{setTextColor(e.target.value)}}>Red</option>
+              <option value="#08b10e" onClick={(e)=>{setTextColor(e.target.value)}}>Green</option>
+            </select>
+          </div>
+        </div>
 
-        <h6>Text Type:</h6>
-        <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
-          <option value="fw-normal" onClick={(e)=>{setTextType(e.target.value)}}>Normal</option>
-          <option value="fw-bold" onClick={(e)=>{setTextType(e.target.value)}}>Bold</option>
-          <option value="fs-5 fw-bold text-decoration-underline" onClick={(e)=>{setTextType(e.target.value)}}>Heading</option>
-          <option value="text-decoration-underline" onClick={(e)=>{setTextType(e.target.value)}}>underline</option>
-          <option value="text-decoration-line-through" onClick={(e)=>{setTextType(e.target.value)}}>cut</option>
-        </select>
 
-        <button className="btn btn-success" id="btnSave" onClick={html2canvas}>Save</button>
+        <div className="row my-2">
+          <div className="col-5">
+            <h6>Text Type:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+              <option value="fw-normal" onClick={(e)=>{setTextType(e.target.value)}}>Normal</option>
+              <option value="fw-bold" onClick={(e)=>{setTextType(e.target.value)}}>Bold</option>
+              <option value="fs-5 fw-bold text-decoration-underline" onClick={(e)=>{setTextType(e.target.value)}}>Heading</option>
+              <option value="text-decoration-underline" onClick={(e)=>{setTextType(e.target.value)}}>underline</option>
+              <option value="text-decoration-line-through" onClick={(e)=>{setTextType(e.target.value)}}>cut</option>
+            </select>
+          </div>
+
+          <div className="col-5">
+            <h6>Text Size:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+              <option value="16px" onClick={(e)=>{setTextSize(e.target.value)}}>Normal</option>
+              <option value="2px" onClick={(e)=>{setTextSize(e.target.value)}}>2px</option>
+              <option value="4px" onClick={(e)=>{setTextSize(e.target.value)}}>4px</option>
+              <option value="6px" onClick={(e)=>{setTextSize(e.target.value)}}>6px</option>
+              <option value="8px" onClick={(e)=>{setTextSize(e.target.value)}}>8px</option>
+              <option value="10px" onClick={(e)=>{setTextSize(e.target.value)}}>10px</option>
+              <option value="12px" onClick={(e)=>{setTextSize(e.target.value)}}>12px</option>
+              <option value="14px" onClick={(e)=>{setTextSize(e.target.value)}}>14px</option>
+              <option value="15px" onClick={(e)=>{setTextSize(e.target.value)}}>15px</option>
+              <option value="20px" onClick={(e)=>{setTextSize(e.target.value)}}>20px</option>
+              <option value="25px" onClick={(e)=>{setTextSize(e.target.value)}}>25px</option>
+              <option value="30px" onClick={(e)=>{setTextSize(e.target.value)}}>30px</option>
+              <option value="40px" onClick={(e)=>{setTextSize(e.target.value)}}>40px</option>
+              <option value="50px" onClick={(e)=>{setTextSize(e.target.value)}}>50px</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="row my-2">
+          <div className="col-5">
+          <h6>Word Space:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+              <option value="16px" onClick={(e)=>{setWordSpace(e.target.value)}}>Normal</option>
+              <option value="2px"  onClick={(e)=>{setWordSpace(e.target.value)}}>2px</option>
+              <option value="4px"  onClick={(e)=>{setWordSpace(e.target.value)}}>4px</option>
+              <option value="6px"  onClick={(e)=>{setWordSpace(e.target.value)}}>6px</option>
+              <option value="8px"  onClick={(e)=>{setWordSpace(e.target.value)}}>8px</option>
+              <option value="10px" onClick={(e)=>{setWordSpace(e.target.value)}}>10px</option>
+              <option value="12px" onClick={(e)=>{setWordSpace(e.target.value)}}>12px</option>
+              <option value="14px" onClick={(e)=>{setWordSpace(e.target.value)}}>14px</option>
+              <option value="15px" onClick={(e)=>{setWordSpace(e.target.value)}}>15px</option>
+              <option value="20px" onClick={(e)=>{setWordSpace(e.target.value)}}>20px</option>
+              <option value="25px" onClick={(e)=>{setWordSpace(e.target.value)}}>25px</option>
+              <option value="30px" onClick={(e)=>{setWordSpace(e.target.value)}}>30px</option>
+              <option value="40px" onClick={(e)=>{setWordSpace(e.target.value)}}>40px</option>
+              <option value="50px" onClick={(e)=>{setWordSpace(e.target.value)}}>50px</option>
+            </select>
+          </div>
+
+          <div className="col-5">
+            <h6>Line Space:</h6>
+            <select className="form-select form-select-sm" multiple aria-label=".form-select-sm example">
+              <option value="16px" onClick={(e)=>{setLineSpace(e.target.value)}}>Normal</option>
+              <option value="2px"  onClick={(e)=>{setLineSpace(e.target.value)}}>2px</option>
+              <option value="4px"  onClick={(e)=>{setLineSpace(e.target.value)}}>4px</option>
+              <option value="6px"  onClick={(e)=>{setLineSpace(e.target.value)}}>6px</option>
+              <option value="8px"  onClick={(e)=>{setLineSpace(e.target.value)}}>8px</option>
+              <option value="10px" onClick={(e)=>{setLineSpace(e.target.value)}}>10px</option>
+              <option value="12px" onClick={(e)=>{setLineSpace(e.target.value)}}>12px</option>
+              <option value="14px" onClick={(e)=>{setLineSpace(e.target.value)}}>14px</option>
+              <option value="15px" onClick={(e)=>{setLineSpace(e.target.value)}}>15px</option>
+              <option value="20px" onClick={(e)=>{setLineSpace(e.target.value)}}>20px</option>
+              <option value="25px" onClick={(e)=>{setLineSpace(e.target.value)}}>25px</option>
+              <option value="30px" onClick={(e)=>{setLineSpace(e.target.value)}}>30px</option>
+              <option value="40px" onClick={(e)=>{setLineSpace(e.target.value)}}>40px</option>
+              <option value="50px" onClick={(e)=>{setLineSpace(e.target.value)}}>50px</option>
+            </select>
+          </div>
+        </div>
+
+        <button className="btn btn-success" id="btnSave" onClick={html2canvas}>Simply take a screenshot after wrtting...</button>
 
 
         </div>

@@ -63,6 +63,10 @@
   border: none;
   resize: none;
 }
+.asmnt-container {
+  height: 520px;
+  overflow-y: hidden;
+}
 
 /* fonts */
 
@@ -72,26 +76,57 @@
 }
 @font-face {
   font-family: akashHandWritten;
+  size-adjust: 90%;
+  line-height: 30px;
   src: url(/src/fonts/akashHandWritten.ttf);
 }
 @font-face {
   font-family: CedarvilleCursive-Regular;
   src: url(/src/fonts/CedarvilleCursive-Regular.ttf);
+  size-adjust: 80%;
 }
 @font-face {
-  font-family: handwritten-font-1;
-  src: url(/src/fonts/handwritten-font-1.woff);
+  font-family: Atmosphier-Notes;
+  src: url(/src/fonts/Atmosphier-Notes.otf);
+  size-adjust: 55%;
+  line-height: 2px;
+}
+@font-face {
+  font-family: Manly-signature;
+  src: url(/src/fonts/Manly\ Signature\ Regular.ttf);
+  size-adjust: 220%;
+  line-height: 500%;
+}
+@font-face {
+  font-family: Sansburg-signature;
+  src: url(/src/fonts/Sansburg\ Signature.ttf);
+  size-adjust: 200%;
+  line-height: 500%;
 }
 
 /* responsive design for mobile  */
 @media only screen and (max-width: 600px) {
+  *{
+    overflow-x: hidden;
+  }
   .textContent {
-    top: 800px;
+    position: absolute;
+    top: 808px;
     left: 35px;
     width: 350px;
   }
   .page-options{
+    position: absolute;
     margin-left: 20px;
+    top: 1350px;
+    left: 25px;
+
   }
+  .asmnt-container {
+    height: 1040px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
 }
 
