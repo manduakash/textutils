@@ -1,15 +1,26 @@
 {
   "files": {
-    "main.css": "/textutils/static/css/main.7c6c5363.css",
-    "main.js": "/textutils/static/js/main.a25049db.js",
+    "main.css": "/textutils/static/css/main.b08b3509.css",
+    "main.js": "/textutils/static/js/main.b3c079e4.js",
+    "static/js/703.c8ef0610.chunk.js": "/textutils/static/js/703.c8ef0610.chunk.js",
+    "static/js/9.d5516551.chunk.js": "/textutils/static/js/9.d5516551.chunk.js",
     "static/js/787.719ec76d.chunk.js": "/textutils/static/js/787.719ec76d.chunk.js",
+    "static/media/page1.jpg": "/textutils/static/media/page1.d87f5bc744c1394dc710.jpg",
+    "static/media/Sansburg Signature.ttf": "/textutils/static/media/Sansburg Signature.81007c8006c2e637ec70.ttf",
+    "static/media/Atmosphier-Notes.otf": "/textutils/static/media/Atmosphier-Notes.3f3e5057704544a37856.otf",
+    "static/media/CedarvilleCursive-Regular.ttf": "/textutils/static/media/CedarvilleCursive-Regular.a669593f51bb81ad0cc1.ttf",
+    "static/media/Glossy Sheen Regular DEMO.ttf": "/textutils/static/media/Glossy Sheen Regular DEMO.49248ce42805d2366c44.ttf",
+    "static/media/akashHandWritten.ttf": "/textutils/static/media/akashHandWritten.8f95afccb2b52792929d.ttf",
+    "static/media/Manly Signature Regular.ttf": "/textutils/static/media/Manly Signature Regular.b7b0d3ebb4db39e6a4c3.ttf",
     "index.html": "/textutils/index.html",
-    "main.7c6c5363.css.map": "/textutils/static/css/main.7c6c5363.css.map",
-    "main.a25049db.js.map": "/textutils/static/js/main.a25049db.js.map",
+    "main.b08b3509.css.map": "/textutils/static/css/main.b08b3509.css.map",
+    "main.b3c079e4.js.map": "/textutils/static/js/main.b3c079e4.js.map",
+    "703.c8ef0610.chunk.js.map": "/textutils/static/js/703.c8ef0610.chunk.js.map",
+    "9.d5516551.chunk.js.map": "/textutils/static/js/9.d5516551.chunk.js.map",
     "787.719ec76d.chunk.js.map": "/textutils/static/js/787.719ec76d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c6c5363.css",
-    "static/js/main.a25049db.js"
+    "static/css/main.b08b3509.css",
+    "static/js/main.b3c079e4.js"
   ]
 }
