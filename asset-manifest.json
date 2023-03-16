@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/textutils/static/css/main.b08b3509.css",
-    "main.js": "/textutils/static/js/main.b3c079e4.js",
+    "main.js": "/textutils/static/js/main.c35d6367.js",
     "static/js/703.c8ef0610.chunk.js": "/textutils/static/js/703.c8ef0610.chunk.js",
     "static/js/9.d5516551.chunk.js": "/textutils/static/js/9.d5516551.chunk.js",
     "static/js/787.719ec76d.chunk.js": "/textutils/static/js/787.719ec76d.chunk.js",
@@ -14,13 +14,13 @@
     "static/media/Manly Signature Regular.ttf": "/textutils/static/media/Manly Signature Regular.b7b0d3ebb4db39e6a4c3.ttf",
     "index.html": "/textutils/index.html",
     "main.b08b3509.css.map": "/textutils/static/css/main.b08b3509.css.map",
-    "main.b3c079e4.js.map": "/textutils/static/js/main.b3c079e4.js.map",
+    "main.c35d6367.js.map": "/textutils/static/js/main.c35d6367.js.map",
     "703.c8ef0610.chunk.js.map": "/textutils/static/js/703.c8ef0610.chunk.js.map",
     "9.d5516551.chunk.js.map": "/textutils/static/js/9.d5516551.chunk.js.map",
     "787.719ec76d.chunk.js.map": "/textutils/static/js/787.719ec76d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b08b3509.css",
-    "static/js/main.b3c079e4.js"
+    "static/js/main.c35d6367.js"
   ]
 }
