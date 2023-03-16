@@ -94,7 +94,7 @@ const html2canvas=()=>{
 
   return (
     <div style={props.ThemeStyle}>
-      <h1 className="overflow-hidden">Free assignment Generator</h1>
+      <h1 className="overflow-hidden">Write like a ditto handwritten texts</h1>
       <small>
         You can use it for your school or college assigments/lab without writting it just simply copy and past then take screenshot of it!
       </small>
