@@ -3,7 +3,7 @@ import page1 from "../images/page1.jpg";
 
 const Page = (props) => {
   return (
-    <div className="container page-container">
+    <div className="container-fluid page-container">
       <img
         className="d-flext justify-content-center page"
         src={page1}

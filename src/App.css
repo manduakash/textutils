@@ -106,25 +106,35 @@
 
 /* responsive design for mobile  */
 @media only screen and (max-width: 600px) {
-  *{
-    overflow-x: hidden;
+
+  .page {
+    position: absolute;
+    left: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    width: 100%;
   }
   .textContent {
     position: absolute;
-    top: 772px;
-    left: 37px;
-    width: 350px;
+    top: 820px;
+    left: 12px;
+    width: 330px;
+    height: 480px;
   }
   .page-options{
     position: absolute;
     margin-left: 20px;
-    top: 1350px;
+    top: 1400px;
     left: 25px;
 
   }
+  .asmnt-container .col-sm-12{
+    padding: 0;
+    overflow-x: visible;
+  }
   .asmnt-container {
     height: 1040px;
-    overflow-y: hidden;
     overflow-x: hidden;
   }
 

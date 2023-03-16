@@ -163,7 +163,7 @@ const html2canvas=()=>{
         </button>
       </div>
 
-      <div className="container asmnt-container row my-2">
+      <div className="container-fluid asmnt-container row my-2">
         <div className="col-md-6 col-sm-12">
           <Page text={text} handleOnChange={handleOnChange} textColor={textColor} textStyle={textStyle} textType={textType} textSize={textSize} wordSpace={wordSpace} lineSpace={lineSpace}></Page>
         </div>
